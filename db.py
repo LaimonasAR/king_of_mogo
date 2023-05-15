@@ -39,3 +39,4 @@ class Mongo:
         result = collection.delete_many(query)
         return f"Deleted {result.deleted_count} tasks"
     
+    
