@@ -5,13 +5,6 @@ mongodb_port = 27017
 database_name = "Tasks"
 collection_name = "user_tasks"
 
-user_tasks = {
-    "name": "User",
-    "task_title": "Buy bread",
-    "task_description": "Go to nearest shop",
-    "task_status": "pending",
-}
-
 my_db = Mongo(
     host=mongodb_host, port=mongodb_port, db_name=database_name, coll=collection_name
 )
