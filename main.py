@@ -26,13 +26,13 @@ while True:
 
         case '3':
             print("Your tasks: ")
-            tasks = app.find_task(querry= {"name": user_name})
+            tasks = app.find_task(query= {"name": user_name})
             for task in tasks:
                 print(task)
 
             update_task = input("Enter task title to update: ")
             print("Selected task: ")
-            print(app.find_task(querry={"name": user_name, "task_title": update_task}))
+            print(app.find_task(query={"name": user_name, "task_title": update_task}))
             update_name = input("What do you want to update: ")
             update_value = input("enter new value: ")
             updates = app.update_task(query = {"task_title": update_task}, update= {update_name: update_value})
