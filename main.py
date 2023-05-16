@@ -19,15 +19,30 @@ while True:
             
         case '2': 
             find_task = input("Enter task to find: ")
-            app.find_task(query = {"name": user_name, "task_title": find_task})
-        
+            tasks_list = app.find_task(query = {"name": user_name, "task_title": find_task})
+            for task in tasks_list:
+                print(task)
+
+
         case '3':
-            update_task = input("Enter task to update: ") 
-            app.update_task(query = {"task_title": update_task})
+            print("Your tasks: ")
+            tasks = app.find_task(querry= {"name": user_name})
+            for task in tasks:
+                print(task)
+
+            update_task = input("Enter task title to update: ")
+            print("Selected task: ")
+            print(app.find_task(querry={"name": user_name, "task_title": update_task}))
+            update_name = input("What do you want to update: ")
+            update_value = input("enter new value: ")
+            updates = app.update_task(query = {"task_title": update_task}, update= {update_name: update_value})
+            print(updates)
+            
 
         case '4':
-            del_task = input("Enter task to delete: ") 
-            app.delete_task(query = {"name": del_task})
+            del_task = input("Enter task name to delete: ") 
+            print(deleted_task = app.delete_task(query = {"name": del_task}))
+            
 
         case '0':
             print("Goodbye")
