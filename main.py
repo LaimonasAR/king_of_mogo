@@ -1,9 +1,10 @@
 import app
-print("*************")
-print("Welcome")
-print("*************")
 
 
+user_name = input("Plese enter user name: ")
+print("*************")
+print(f"Welcome {user_name}")
+print("*************")
 
 while True:
 
@@ -11,7 +12,6 @@ while True:
 
     match choice:
         case '1':
-            user_name = input("Plese enter user name: ")
             task_title = input("Plese enter task title: ")
             task_description = input("Plese enter task desription: ")
             task_status = input("Plese enter task status: ")
