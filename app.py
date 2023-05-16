@@ -13,14 +13,14 @@ def create_task(task: dict) -> str:
     creation = my_db.create_task(task)
     return creation
 
-def find_task(querry: dict) -> list:
-    found = my_db.find_task(query=querry)
+def find_task(query: dict) -> list:
+    found = my_db.find_task(query=query)
     return found
 
 def update_task(query: dict, update:dict) -> str:
     updated = my_db.update_task(query=query, update=update)
     return updated
 
-def delete_task(querry: dict) -> str:
-    deleted = my_db.delete_tasks(query=querry)
+def delete_task(query: dict) -> str:
+    deleted = my_db.delete_tasks(query=query)
     return deleted
