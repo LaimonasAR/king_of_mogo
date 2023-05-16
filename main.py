@@ -19,15 +19,15 @@ while True:
             
         case '2': 
             find_task = input("Enter task to find: ")
-            app.update_task(query = {"name": {find_task}})
+            app.update_task(query = {"name": user_name, "task_title": find_task})
         
         case '3':
             update_task = input("Enter task to update: ") 
-            app.delete_task(query = {"task_title": {update_task}})
+            app.delete_task(query = {"task_title": update_task})
 
         case '4':
             del_task = input("Enter task to delete: ") 
-            app.delete_task(query = {"name": {del_task}})
+            app.delete_task(query = {"name": del_task})
 
         case '0':
             print("Goodbye")
